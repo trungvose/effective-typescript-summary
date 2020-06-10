@@ -63,7 +63,7 @@ alert("Hello", "TypeScript"); // alerts "Hello"
 - TS types are not available at runtime. To query a type at runtime, you need some way to reconstruct it. Tagged unions and property checking are common ways to do this. Some constructs, such as `class`, introduce both a TS type and a value that is available at runtime.
 
 <details>
-<summary><b>:x: Not OK - Using Interface `instanceof`</b></summary>
+<summary><b>:x: Not OK - Using Interface instanceof</b></summary>
 
 ```typescript
 interface Square {
@@ -88,7 +88,7 @@ function calculateArea(shape: Shape) {
 </details>
 
 <details>
-<summary><b>:heavy_check_mark: OK - Using Class and `instanceof` </b></summary>
+<summary><b>:heavy_check_mark: OK - Using Class and instanceof </b></summary>
 
 ```typescript
 class Square {
@@ -114,9 +114,22 @@ function calculateArea(shape: Shape) {
 
 </details>
 
-See more code example on [Chapter 3 Code Example][chapter3]
+View more code [Chapter 3 Code Example][chapter3]
+
+### Item 4: Get Comfortable with Structural Typing
+
+- JS is a duck typed and TS uses structural typing to model this.
+
+  - Duck typed: If you pass a function a value with all the right properties, it won't care how you made the value
+  - Structural typing: values assignable to your interface might have properties beyond those explicitly listed in your type declarations. Type are not "sealed". [View code][chapter4-1]
+
+- Be aware that classes also follow structural typing rules. You might not have an instance of the class you expect! [View code][chapter4-2]
+- Use structural typing to facilitate unit testing. [View code][chapter4-3]
 
 [website]: https://effectivetypescript.com/
 [github]: https://github.com/danvk/effective-typescript
 [author]: https://github.com/danvk
 [chapter3]: https://github.com/danvk/effective-typescript/tree/master/samples/ch01-intro/item-03-independent
+[chapter4-1]: https://github.com/danvk/effective-typescript/blob/master/samples/ch01-intro/item-04-structural/structural-04.ts
+[chapter4-2]: https://github.com/danvk/effective-typescript/blob/master/samples/ch01-intro/item-04-structural/structural-10.ts
+[chapter4-3]: https://github.com/danvk/effective-typescript/blob/master/samples/ch01-intro/item-04-structural/structural-14.ts
