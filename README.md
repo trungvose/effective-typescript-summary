@@ -1,8 +1,10 @@
 # Effective Typescript Summary
 
-My personal notes while reading "Effective TypeScript: 62 Specific Ways to Improve Your TypeScript" by [Dan Vanderkam][author].
+My notes while reading "Effective TypeScript: 62 Specific Ways to Improve Your TypeScript" by [Dan Vanderkam][author].
 
-It only contains some basic concept from the end of each chapter. If you want to learn more, I highly recommend you should buy the book.
+You know, it is difficult to absorb all the information when reading a whole book from the first page to the last page. This time I decided to take note and also, test and the code while reading. I found it is effective to help me to understand much better than only lying on the bed and crush through the book. I will do it again in the future.
+
+It only contains some basic concepts from the end of each chapter. If you want to learn more, I <u>highly recommend you to buy the book</u>.
 
 - [Effective Typescript website][website] - Dan posted some parts of the book as the blog post. Very interesting to read if you can't afford the full book.
 - [Code Sample][github]
@@ -26,7 +28,7 @@ Happy reading!
 
 ### Item 1: Understand the Relationship Between TypeScript and JavaScript
 
-- TS is a superset of JS. In other words, all JS programs are already TS programs. TS has some syntax of its own, so TS are not, in general, valid JS programs.
+- TS is a superset of JS. In other words, all JS programs are already TS programs. TS has some syntax of its own, so TS is not, in general, valid JS programs.
 
 - TS adds a type system that models JS's runtime behavior and tries to spot code which will throw exception at runtime. But you shouldn't it to flag every exception. It is possible for code to pass the type checker but still throw error at runtime.
 
@@ -120,8 +122,8 @@ View more code [Chapter 3 Code Example][chapter3]
 
 - JS is a duck typed and TS uses structural typing to model this.
 
-  - Duck typed: If you pass a function a value with all the right properties, it won't care how you made the value
-  - Structural typing: values assignable to your interface might have properties beyond those explicitly listed in your type declarations. Type are not "sealed". [View code][chapter4-1]
+  - Duck typed: If you pass a function a value with all the right properties, it won't care how you made the value.
+  - Structural typing: values assignable to your interface might have properties beyond those explicitly listed in your type declarations. Type is not "sealed". [View code][chapter4-1]
 
 - Be aware that classes also follow structural typing rules. You might not have an instance of the class you expect! [View code][chapter4-2]
 - Use structural typing to facilitate unit testing. [View code][chapter4-3]
