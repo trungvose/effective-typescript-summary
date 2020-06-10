@@ -63,7 +63,7 @@ alert("Hello", "TypeScript"); // alerts "Hello"
 - TS types are not available at runtime. To query a type at runtime, you need some way to reconstruct it. Tagged unions and property checking are common ways to do this. Some constructs, such as `class`, introduce both a TS type and a value that is available at runtime.
 
 <details>
-<summary><b>Not OK - Using Interface `instanceof`</b></summary>
+<summary><b>:x: Not OK - Using Interface `instanceof`</b></summary>
 
 ```typescript
 interface Square {
@@ -88,7 +88,7 @@ function calculateArea(shape: Shape) {
 </details>
 
 <details>
-<summary><b>OK - Using Class and `instanceof` </b></summary>
+<summary><b>:heavy_check_mark: OK - Using Class and `instanceof` </b></summary>
 
 ```typescript
 class Square {
@@ -111,6 +111,7 @@ function calculateArea(shape: Shape) {
   }
 }
 ```
+
 </details>
 
 See more code example on [Chapter 3 Code Example][chapter3]
